@@ -48,10 +48,9 @@ export class TodoControllerBase {
     return await this.service.create({
       data: data,
       select: {
-        content: true,
         createdAt: true,
         id: true,
-        name: true,
+        todo: true,
         updatedAt: true,
       },
     });
@@ -72,10 +71,9 @@ export class TodoControllerBase {
     return this.service.findMany({
       ...args,
       select: {
-        content: true,
         createdAt: true,
         id: true,
-        name: true,
+        todo: true,
         updatedAt: true,
       },
     });
@@ -97,10 +95,9 @@ export class TodoControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
-        content: true,
         createdAt: true,
         id: true,
-        name: true,
+        todo: true,
         updatedAt: true,
       },
     });
@@ -131,10 +128,9 @@ export class TodoControllerBase {
         where: params,
         data: data,
         select: {
-          content: true,
           createdAt: true,
           id: true,
-          name: true,
+          todo: true,
           updatedAt: true,
         },
       });
@@ -164,10 +160,9 @@ export class TodoControllerBase {
       return await this.service.delete({
         where: params,
         select: {
-          content: true,
           createdAt: true,
           id: true,
-          name: true,
+          todo: true,
           updatedAt: true,
         },
       });

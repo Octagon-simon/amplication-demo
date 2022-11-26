@@ -19,9 +19,8 @@ model User {
 }
 
 model Todo {
-  content   String   @unique
   createdAt DateTime @default(now())
   id        String   @id @default(cuid())
-  name      String   @unique
+  todo      String   @unique
   updatedAt DateTime @updatedAt
 }

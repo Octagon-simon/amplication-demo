@@ -11,18 +11,10 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsDate } from "class-validator";
+import { IsDate, IsString } from "class-validator";
 import { Type } from "class-transformer";
 @ObjectType()
 class Todo {
-  @ApiProperty({
-    required: true,
-    type: String,
-  })
-  @IsString()
-  @Field(() => String)
-  content!: string;
-
   @ApiProperty({
     required: true,
   })
@@ -45,7 +37,7 @@ class Todo {
   })
   @IsString()
   @Field(() => String)
-  name!: string;
+  todo!: string;
 
   @ApiProperty({
     required: true,
