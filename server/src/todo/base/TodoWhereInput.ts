@@ -25,17 +25,6 @@ class TodoWhereInput {
   @Field(() => StringFilter, {
     nullable: true,
   })
-  content?: StringFilter;
-
-  @ApiProperty({
-    required: false,
-    type: StringFilter,
-  })
-  @Type(() => StringFilter)
-  @IsOptional()
-  @Field(() => StringFilter, {
-    nullable: true,
-  })
   id?: StringFilter;
 
   @ApiProperty({
@@ -47,6 +36,6 @@ class TodoWhereInput {
   @Field(() => StringFilter, {
     nullable: true,
   })
-  name?: StringFilter;
+  todo?: StringFilter;
 }
 export { TodoWhereInput };

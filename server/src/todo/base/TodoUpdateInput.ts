@@ -23,17 +23,6 @@ class TodoUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  content?: string;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  name?: string;
+  todo?: string;
 }
 export { TodoUpdateInput };

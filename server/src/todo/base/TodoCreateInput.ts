@@ -20,14 +20,6 @@ class TodoCreateInput {
   })
   @IsString()
   @Field(() => String)
-  content!: string;
-
-  @ApiProperty({
-    required: true,
-    type: String,
-  })
-  @IsString()
-  @Field(() => String)
-  name!: string;
+  todo!: string;
 }
 export { TodoCreateInput };
