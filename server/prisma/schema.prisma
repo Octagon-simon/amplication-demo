@@ -24,3 +24,12 @@ model Todo {
   todo      String   @unique
   updatedAt DateTime @updatedAt
 }
+
+model Product {
+  createdAt   DateTime @default(now())
+  id          String   @id @default(cuid())
+  productName String   @unique
+  productType String
+  stock       Int
+  updatedAt   DateTime @updatedAt
+}
