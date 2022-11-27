@@ -2,6 +2,8 @@
 
 This is a simple todo list built with ReactJS and Amplication. This demo shows us how to use amplication to build our backend app.
 
+![image](https://user-images.githubusercontent.com/68190998/204152536-0d5acb42-4b79-492c-b108-0e90a7775f2f.png)
+
 ## PREREQUISITES
 
 - NPM 
