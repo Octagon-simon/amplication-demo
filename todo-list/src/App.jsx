@@ -85,7 +85,6 @@ function App() {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("🤦‍♀️")
         if (data?.length) {
           setTodos(data)
         }else{
@@ -126,7 +125,9 @@ function App() {
         <form method="post" onSubmit={newTodo}>
           <div className='input-group'>
             <input onChange={handleChange} defaultValue={data.todo} required type={"text"} name="todo" placeholder="Add a todo" className='input' />
+            <div>
             <button className='button' type='submit'>Add</button>
+            </div>
           </div>
         </form>
         {todos &&
@@ -137,7 +138,9 @@ function App() {
                   <div className='todo'>
                     <p>{val.todo}</p>
                   </div>
-                  <button onClick={deleteTodo} data-todo-id={val.id} type="button" className='button delete'>Delete</button>
+                  <div>
+                    <button onClick={deleteTodo} data-todo-id={val.id} type="button" className='button delete'>Delete</button>
+                  </div>
                 </div>
               </div>
             )
